@@ -1,0 +1,1 @@
+# puriwt-co-op-tests-ruby-on-rails

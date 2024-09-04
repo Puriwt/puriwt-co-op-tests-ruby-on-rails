@@ -1,0 +1,2 @@
+module RegistationHelper
+end

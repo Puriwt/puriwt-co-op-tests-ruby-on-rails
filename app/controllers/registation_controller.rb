@@ -31,6 +31,11 @@ class RegistationController < ApplicationController
     end
   end
 
+  def cancle
+    @user = User.new
+    render :index 
+  end
+
   def destroy
     @user = User.find(params[:id])
     @user.destroy

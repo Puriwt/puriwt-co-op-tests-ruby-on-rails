@@ -56,6 +56,9 @@
 - Add secret
 - then do the same thing with RAILS_MASTER
 
+# prepare your project to run on VM
+- push some thing to github to tricker Git Acctions
+- wait for Git Acctions passed
 
 ## --------- deployment ------------
 

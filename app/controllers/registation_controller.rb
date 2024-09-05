@@ -20,4 +20,7 @@ class RegistationController < ApplicationController
       render :new
     end
   end
+
+  def users 
+  end
 end

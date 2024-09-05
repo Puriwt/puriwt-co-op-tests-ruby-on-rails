@@ -1,9 +1,31 @@
 <div class="full">
     <div class="container">
-        <h1><%= @sending%></h1>
-        <%= render "form" %>
-    </div>
-    <div class="container">
-        <%= render "users" %>
+            <div id="form-container">
+                <%= render "form" %>
+            </div>
+            <div id="users-container" style="display: none;">
+                <%= render "users" %>
+            </div>
+        <button id="toggle-btn" class="btn btn-primary">Next</button>
     </div>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const toggleBtn = document.getElementById("toggle-btn");
+    const formContainer = document.getElementById("form-container");
+    const usersContainer = document.getElementById("users-container");
+
+    toggleBtn.addEventListener("click", function() {
+      if (formContainer.style.display === "none") {
+        formContainer.style.display = "block";
+        usersContainer.style.display = "none";
+        toggleBtn.textContent = "Next";
+      } else {
+        formContainer.style.display = "none";
+        usersContainer.style.display = "block";
+        toggleBtn.textContent = "Back";
+      }
+    });
+  });
+</script>

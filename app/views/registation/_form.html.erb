@@ -1,49 +1,49 @@
 <%= form_with url: "/submit_form", method: :post do |form| %>
+<h1><%= @sending %></h1>
+<div class="form">
   <div class="group">
     <div class="form-group">
         <%= form.label :first_name, "First Name" %>
-        <%= form.text_field :first_name, class: "form-control", required: true %>
+        <%= form.text_field :first_name, class: "input-field", required: true %>
     </div>
     <div class="form-group">
         <%= form.label :last_name, "Last Name" %> 
-        <%= form.text_field :last_name, class: "form-control", required: true %>
+        <%= form.text_field :last_name, class: "input-field", required: true %>
     </div>
   </div>
 
-  <!-- Birthdate Field -->
-  <div class="form-group">
-    <%= form.label :birthdate, "Birthdate" %>
-    <%= form.date_field :birthdate, class: "form-control" %>
+  <div class="group">
+    <div class="form-group">
+        <%= form.label :birthdate, "Birthdate" %>
+        <%= form.date_field :birthdate, class: "input-field" %>
+    </div>
+    <div class="form-group">
+        <%= form.label :gender, "Gender" %><br>
+        <%= form.radio_button :gender, "Male", checked: true %> Male
+        <%= form.radio_button :gender, "Female" %> Female
+        <%= form.radio_button :gender, "Other" %> Other
+    </div>
   </div>
 
-  <!-- Email Field -->
+  <div class="group">
+    <div class="form-group">
+        <%= form.label :email, "Email" %>
+        <%= form.email_field :email, class: "input-field", required: true %>
+    </div>
   <div class="form-group">
-    <%= form.label :email, "Email" %>
-    <%= form.email_field :email, class: "form-control", required: true %>
+    <%= form.label :phone, "Phone Number" %>
+    <%= form.telephone_field :phone, class: "input-field" %>
   </div>
-
-  <!-- Phone Field -->
-  <div class="form-group">
-    <%= form.label :phone, "Phone" %>
-    <%= form.telephone_field :phone, class: "form-control" %>
-  </div>
-
-  <!-- Radio Buttons for Gender -->
-  <div class="form-group">
-    <%= form.label :gender, "Gender" %><br>
-    <%= form.radio_button :gender, "Male", checked: true %> Male
-    <%= form.radio_button :gender, "Female" %> Female
-    <%= form.radio_button :gender, "Other" %> Other
-  </div>
+</div>
 
   <!-- Subject Dropdown -->
   <div class="form-group">
     <%= form.label :subject, "Subject" %>
-    <%= form.select :subject, options_for_select([['General Inquiry', 'general_inquiry'], ['Support', 'support'], ['Feedback', 'feedback']]), { prompt: 'Choose a subject' }, { class: "form-control" } %>
+    <%= form.select :subject, options_for_select([['General Inquiry', 'general_inquiry'], ['Support', 'support'], ['Feedback', 'feedback']]), { prompt: 'Choose a subject' }, { class: "input-field" } %>
   </div>
 
-  <!-- Submit Button -->
   <div class="form-group">
     <%= form.submit "Submit", class: "btn btn-primary" %>
   </div>
+</div>
 <% end %>

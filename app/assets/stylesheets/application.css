@@ -40,8 +40,7 @@
 
   body{
     background: #a4baea;
-    /* height: 100dvh; */
-    /* open to center */
+    height: 100dvh;
   }
 
   .full{
@@ -53,7 +52,7 @@
   }
 
   .container {
-    width: 50%;
+    width: 40%;
     height: 35rem;
     padding: 4rem;
     margin: auto;
@@ -61,20 +60,48 @@
     border-radius: 20px;
   }
 
+  .form{
+    gap: 2rem;
+  }
+
   .group{
     display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    
+  }
+
+  .form-group{
+    flex: 1;
+    background-color: #ffabab;
+  }
+
+  .input-field{
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .group-view{
     display: flex;
     gap: 2rem;
+    flex-direction: column;
   }
-
-  .form-group{
-    flex: 1;
-  }
-
   .card{
-    width: 50px;
+    display: flex;
+    /* width: 80%; */
+    width: 30rem;
     background-color: #ffabab;
+  }
+
+  .btn-primary {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
   }

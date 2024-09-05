@@ -53,13 +53,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow:hidden;
   }
 
   .container {
     display: flex;
     justify-content: center;
     align-items: center; 
-    height: 100vh;           
+    height: 100vh;      
+    animation: fadeinPop 0.7s;     
   }
   
   /* Styling for the form */
@@ -137,15 +139,18 @@
     justify-content: center;
     align-items: center; 
     padding: 5rem;
+    animation: fadeinPop 0.7s;   
   }
 
   .group-card{
     width: 100%;
+    height: 600px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    background: #5acdf6;
+    /* background: #5acdf6; */
     gap: 2rem;
+    overflow-y:auto ;
   }
 
   .card{
@@ -162,6 +167,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
   }
   .body{
     width: 60%;
@@ -197,4 +203,21 @@
     height: 70px;
     background: var(--primary);
     border-radius: 50px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: #dcdcdc;
+  }
+
+  @keyframes fadeinPop {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
   }

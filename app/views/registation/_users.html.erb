@@ -1,39 +1,35 @@
 <div class="group-view">
-    <div class="group-card">
-<% @users.each do |user| %>
-    <div class="card">
+  <div class="group-card">
+    <% @users.each do |user| %>
+      <div class="card">
         <div class="head">
-            <div class="avata">
-                <%= user.first_name[0].upcase if user.first_name.present? %>
-            </div>
+          <div class="avata">
+            <%= user.first_name[0].upcase if user.first_name.present? %>
+          </div>
         </div>
         <div class="body">
-            <div class="body-group">
-                <div><span>Name : </span><p><%= user.first_name%></p></div>
-                <div><p><%= user.last_name%></p></div>
-            </div>
-            
-            <div class="body-group">
-                <div><span>Birthdate : </span><p><%= user.birthdate%></p></div>
-                <div><span>Email : </span><p><%= user.email%></p></div>
-            </div>
-            
-            <div class="body-group">
-                <div><span>Phone number : </span><p><%= user.phone%></p></div>
-                <div><span>Gender : </span><p><%= user.gender%></p></div>
-            </div>
-
-            <div class="body-group">
-                <div><span>Subject : </span><p><%= user.subject%></p></div>
-            </div>
-            
+          <!-- User details -->
+          <div class="body-group">
+            <div><span>Name : </span><p><%= user.first_name %></p></div>
+            <div><p><%= user.last_name %></p></div>
+          </div>
+          <div class="body-group">
+            <div><span>Birthdate : </span><p><%= user.birthdate %></p></div>
+            <div><span>Email : </span><p><%= user.email %></p></div>
+          </div>
+          <div class="body-group">
+            <div><span>Phone number : </span><p><%= user.phone %></p></div>
+            <div><span>Gender : </span><p><%= user.gender %></p></div>
+          </div>
+          <div class="body-group">
+            <div><span>Subject : </span><p><%= user.subject %></p></div>
+          </div>
         </div>
         <div class="end">
-            <%= button_to 'Delete', registation_path(user),method: :delete, data: {turbo_confirm: 'Are you sure to delete?' }, class: "btn" %>
+          <%= button_to 'Edit', edit_registation_path(user), method: :get, class: "btn" %>
+          <%= button_to 'Delete', registation_path(user), method: :delete, data: { turbo_confirm: 'Are you sure to delete?' }, class: "btn" %>
         </div>
-        
-    </div>
-    
-<% end %>
-</div>
+      </div>
+    <% end %>
+  </div>
 </div>

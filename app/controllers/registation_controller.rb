@@ -2,33 +2,42 @@ class RegistationController < ApplicationController
   def index
     @sending = "Register Form"
     @users = User.all
+    @user = User.new
   end
 
   def create
-    @user = User.new(
-      first_name: params[:first_name],
-      last_name: params[:last_name],
-      birthdate: params[:birthdate],
-      gender: params[:gender],
-      email: params[:email],
-      phone: params[:phone],
-      subject: params[:subject]
-    )
+    @user = User.new(user_params)
     if @user.save
       redirect_to root_path, notice: "Form submitted successfully!"
     else
-      render :new
+      render :index
     end
   end
 
-  def users 
+  def edit
+    @users = User.all
+    @user = User.find(params[:id])
+    @sending = "Edit User"
+    render :index  # You will use the same view for both editing and creating
+  end
+
+  def update
+    @user = User.find(params[:id])
+    if @user.update(user_params)
+      redirect_to root_path, notice: "User updated successfully!"
+    else
+      @sending = "Edit User"
+      render :index  # Render index view with form for editing
+    end
   end
 
   def destroy
     @user = User.find(params[:id])
     @user.destroy
-    redirect_to root_path
+    redirect_to root_path, notice: "User deleted successfully!"
   end
+
+  private
 
   def user_params
     params.require(:user).permit(:first_name, :last_name, :birthdate, :gender, :email, :phone, :subject)

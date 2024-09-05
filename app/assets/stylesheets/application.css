@@ -73,7 +73,7 @@
     padding: 3rem 2rem;
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Shadow for depth */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   }
 
   .group{
@@ -131,4 +131,70 @@
     font-size: smaller;
   }
 
+  .group-view{
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 5rem;
+  }
 
+  .group-card{
+    width: 100%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    background: #5acdf6;
+    gap: 2rem;
+  }
+
+  .card{
+    border-radius: 20px;
+    height: 150px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  .head{
+    width: 20%;
+    /* background: #5acdf6; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .body{
+    width: 60%;
+    /* background: #5af6ab; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 0;
+    gap: 0.5rem;
+  }
+
+  .body-group{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+
+    & > div{
+      display: flex;
+      flex: 1;
+
+      & > span{
+        margin: 0 10px 0 0;
+      }
+    }
+  }
+  .end{
+    width: 20%;
+    /* background: #5a5ff6; */
+  }
+
+  .avata{
+    width: 70px;
+    height: 70px;
+    background: var(--primary);
+    border-radius: 50px;
+  }

@@ -56,19 +56,24 @@
   }
 
   .container {
-    width: 40%;
-    height: 35rem;
-    padding: 4rem;
-    margin: auto;
-    background-color: #fff;
-    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 100vh;           
   }
-
-  .form{
+  
+  /* Styling for the form */
+  .form {
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
-    margin: 1rem 0 0 0;
+    gap: 1rem;
+    width: 100%;       
+    max-width: 600px;  
+    height: 35rem;
+    padding: 3rem 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Shadow for depth */
   }
 
   .group{
@@ -105,18 +110,6 @@
       }
   }
 
-  .group-view{
-    display: flex;
-    gap: 2rem;
-    flex-direction: column;
-  }
-  .card{
-    display: flex;
-    /* width: 80%; */
-    width: 30rem;
-    background-color: #ffabab;
-  }
-
   .btn-primary {
     margin: 10px 0 0 0;
     padding: 10px 20px;
@@ -134,9 +127,27 @@
 
   .toggle {
     width: 100%;
-    margin-top: 10px;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
     font-size: smaller;
   }
+  .group-view {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap; 
+    border-radius: var(--radius-nomal);
+  }
+  
+  .card {
+    flex: 0 0 auto; 
+    width: 70%; 
+    height: 300px;
+    margin-right: 10px; 
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+

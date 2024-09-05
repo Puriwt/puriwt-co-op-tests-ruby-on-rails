@@ -254,3 +254,6 @@
   .btn-delete:hover{
     background: var(--danger-hover);
   }
+  #toggle-btn{
+    color: #dddddd;
+  }

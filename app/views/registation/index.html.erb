@@ -6,9 +6,7 @@
                 <%= render "users" %>
             </div>
         <div id="toggle" class="toggle">
-            <div>
-            <a id="toggle-btn" class="">Next</a>
-            </div>
+            <a id="toggle-btn" class="">User list</a>
         </div>
 </div>
 
@@ -22,7 +20,7 @@
       if (formContainer.style.display == "none") {
         formContainer.style.display = "block";
         usersContainer.style.display = "none";
-        toggleBtn.textContent = "Next";
+        toggleBtn.textContent = "User list";
       } else {
         formContainer.style.display = "none";
         usersContainer.style.display = "block";

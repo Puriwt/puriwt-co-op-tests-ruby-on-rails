@@ -26,8 +26,8 @@
           </div>
         </div>
         <div class="end">
-          <%= button_to 'Edit', edit_registation_path(user), method: :get, class: "btn" %>
-          <%= button_to 'Delete', registation_path(user), method: :delete, data: { turbo_confirm: 'Are you sure to delete?' }, class: "btn" %>
+          <%= button_to 'Edit', edit_registation_path(user), method: :get, class: "btn btn-edit" %>
+          <%= button_to 'Delete', registation_path(user), method: :delete, data: { turbo_confirm: 'Are you sure to delete?' }, class: "btn btn-delete" %>
         </div>
       </div>
     <% end %>

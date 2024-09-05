@@ -10,6 +10,7 @@
     --primary-hover: #5b64b4;
     --secondary-hover: #525252;
     --tertiary-hover: #f8f9f9;
+    --danger-hover: #dd3c4c;
   
     --primary-active: #003d78;
     --secondary-active: #1c1c1c;
@@ -196,6 +197,10 @@
   .end{
     width: 20%;
     /* background: #5a5ff6; */
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
+    gap: 0.5rem;
   }
 
   .avata{
@@ -220,4 +225,28 @@
       opacity: 1;
       transform: scale(1);
     }
+  }
+
+  .btn{
+    padding: 5px 20px;
+    border: none;
+    border-radius: var(--radius-nomal);
+    cursor: pointer;
+    color: white;
+  }
+
+  .btn-edit{
+    background: var(--primary);
+  }
+
+  .btn-edit:hover{
+    background: var(--primary-hover);
+  }
+
+  .btn-delete{
+    background: var(--danger);
+  }
+
+  .btn-delete:hover{
+    background: var(--danger-hover);
   }

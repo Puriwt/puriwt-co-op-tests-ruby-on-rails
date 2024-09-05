@@ -5,11 +5,11 @@
             <div id="users-container" style="display: none;">
                 <%= render "users" %>
             </div>
-        </section>
         <div id="toggle" class="toggle">
-            <div></div>
+            <div>
             <a id="toggle-btn" class="">Next</a>
-
+            </div>
+        </div>
 </div>
 
 <script>
@@ -19,7 +19,7 @@
     const usersContainer = document.getElementById("users-container");
 
     toggleBtn.addEventListener("click", function() {
-      if (formContainer.style.display === "none") {
+      if (formContainer.style.display == "none") {
         formContainer.style.display = "block";
         usersContainer.style.display = "none";
         toggleBtn.textContent = "Next";

@@ -20,9 +20,9 @@
       </div>
       <div class="form-group">
         <%= form.label :gender, "Gender" %><br>
-        <div>
-          <%= form.radio_button :gender, "Male" %> Male
-          <%= form.radio_button :gender, "Female" %> Female
+            <div>
+            <%= form.radio_button :gender, "Male", required: true %> <%= form.label :gender_male, "Male" %>
+            <%= form.radio_button :gender, "Female", required: true %> <%= form.label :gender_female, "Female" %>
         </div>
       </div>
     </div>

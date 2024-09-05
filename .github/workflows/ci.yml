@@ -1,7 +1,7 @@
 name: CI
 
 env:
-  IMAGE_NAME: pixel-on-rails
+  IMAGE_NAME: meow-on-rails
 
 on:
   push:

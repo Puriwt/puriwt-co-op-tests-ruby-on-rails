@@ -58,3 +58,11 @@
     background-color: #fff;
     border-radius: 20px;
   }
+
+  .group{
+    display: flex;
+  }
+
+  .form-group{
+    flex: 1;
+  }

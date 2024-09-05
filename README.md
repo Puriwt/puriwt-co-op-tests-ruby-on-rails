@@ -25,5 +25,20 @@
 - run : chmod 400 "keyFileName.pem"
 - connect with step 4 in web.
 
+# (remark in VM we have to use sudo in almost all command) #
+
+# setup work space in VM
+- create foder work space (sudo mkdir yourFoderName)
+
+# install docker in your VM
+- go into your project (cd)
+- run following command begin of Install using the apt repository (https://docs.docker.com/engine/install/ubuntu/)
+- until you finish step 6
+
+# set up file on VM
+- create file docker-compose.yml (nano docker-compose.yml)
+- wright docker-compose.yml following in this project
+- create file .env (nano .env)
+
 ## --------- deployment ------------
 

@@ -126,28 +126,9 @@
   }
 
   .toggle {
-    width: 100%;
-    display: flex;
-    align-items: flex-end;
+    position: fixed;
     justify-content: space-between;
     font-size: smaller;
   }
-  .group-view {
-    display: flex;
-    overflow-x: auto;
-    white-space: nowrap; 
-    border-radius: var(--radius-nomal);
-  }
-  
-  .card {
-    flex: 0 0 auto; 
-    width: 70%; 
-    height: 300px;
-    margin-right: 10px; 
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 10px; 
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
+
 

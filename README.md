@@ -71,3 +71,9 @@
 
 ## --------- deployment ------------
 
+## to run your image in VM when have new commit
+- run: sudo docker compose down
+- sudo docker pull yourDockerHubName/yourImageName
+- sudo docker images 
+- sudo docker rmi yourOldImageId (to delete)
+- sudo docker compose up

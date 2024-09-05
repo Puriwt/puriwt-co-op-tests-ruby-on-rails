@@ -23,4 +23,14 @@ class RegistationController < ApplicationController
 
   def users 
   end
+
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    redirect_to root_path
+  end
+
+  def user_params
+    params.require(:user).permit(:first_name, :last_name, :birthdate, :gender, :email, :phone, :subject)
+  end
 end

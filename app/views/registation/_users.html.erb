@@ -29,6 +29,7 @@
             
         </div>
         <div class="end">
+            <%= button_to 'Delete', registation_path(user),method: :delete, data: {turbo_confirm: 'Are you sure to delete?' }, class: "btn" %>
         </div>
         
     </div>

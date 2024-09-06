@@ -1,5 +1,23 @@
 # puriwt-co-op-tests-ruby-on-rails
 
+# start rails 
+- rails s or rails server
+
+# migrate database
+- rails g migration [descripe]
+- rails db:migrate (to save migrade database after change)
+
+# edit table
+- rename_column :table_name, :old_column_name, :new_column_name (to rename column)
+- rename_table :old_table_name, :new_table_name
+- remove_column :table_name, :column_name, :column_type
+- drop_table :table_name
+- create_table :table_name do |t|
+    t.string :column1_name
+    t.integer :column2_name
+    t.timestamps
+- add_column :users, :new_column, :string
+
 # to create new page run this comman
 - rails g controller [controller name] [page name]
 - ex. rails g controller registation index
